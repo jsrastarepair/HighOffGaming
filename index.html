@@ -10,7 +10,7 @@
     html, body {
       margin: 0;
       padding: 0;
-      width: 200%;
+      width: 100%;
       height: 100%;
     }
 
@@ -25,35 +25,10 @@
       overflow-y: auto;
       padding: 40px 20px;
       box-sizing: border-box;
-    }
-
-    /* FORCE BACKGROUND TO STRETCH AND COVER ANY SCREEN */
-    .bg-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1; 
-      pointer-events: none; 
-      background-color: #111;
-      overflow: hidden;
-    }
-
-    /* Overriding Tenor's container constraints */
-    .bg-container .tenor-gif-embed {
-      width: 100% !important;
-      height: 100% !important;
-      padding-bottom: 0 !important;
-      margin: 0 !important;
-    }
-    
-    /* Forcing the actual internal iframe to stretch like a full-screen background image */
-    .bg-container iframe {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: cover !important; /* Stretches and scales to cover all edges */
-      object-position: center !important;
+      
+      /* THIS FORCES THE RAW GIF TO STRETCH AND FILL ANY SCREEN SHAPE */
+      background: url('https://media.tenor.com/E69pE8T6XmsAAAAC/knuckles-sonic.gif') no-repeat center center fixed;
+      background-size: cover;
     }
 
     /* Header Styling with Dark Shadow for Readability */
@@ -138,14 +113,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Full-Screen Stretched Background Container -->
-  <div class="bg-container">
-    <div class="tenor-gif-embed" data-postid="23448454" data-share-method="host" data-aspect-ratio="1" data-width="100%">
-      <a href="https://tenor.com/view/knuckles-sonic-sonic3and-knuckles-sonic3-sega-gif-23448454">Knuckles Sonic GIF</a>
-    </div>
-    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-  </div>
 
   <header>
     <h1>HighOffGaming</h1>
